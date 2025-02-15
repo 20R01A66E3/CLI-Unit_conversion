@@ -28,26 +28,25 @@ def convert_to_grams(kg):
 
 #length conversion menu
 def length_menu():
-    print("Length Conversion Menu:")
+    print("\nLength Conversion Menu:")
     print("1. Kilometers to Meters")
     print("2. Meters to Kilmeters")
     print("3. Exit")
     try:
         choice = int(input("Enter your choice(1-3): "))
+        if choice == 3:
+            return
         length = float(input("Enter Length: "))
     except:
         print("Invalid choice. Check for menu options or length inputs.")
         length_menu()
     match choice:
         case 1:
-            print(f"{length} kilometers == {convert_to_meters(length)} meters")
+            print(f"\n{length} kilometers == {convert_to_meters(length)} meters")
             length_menu()
         case 2:
-            m = float(input("Enter Length: "))
-            print(f"{length} meters == {convert_to_kilometers(length)} kilometers")
+            print(f"\n{length} meters == {convert_to_kilometers(length)} kilometers")
             length_menu()
-        case 3:
-            menu()
         case _:
             print("Invalid choice. Enter 1 - 3 numbers.")
             length_menu()
@@ -55,25 +54,25 @@ def length_menu():
 
 # Temperature conversion menu
 def temperature_menu():
-    print("Temperature Conversion Menu:")
+    print("\nTemperature Conversion Menu:")
     print("1. Fahrenheit to Celsius")
     print("2. Celsius to Fahrenheit")
     print("3. Exit")
     try:
         choice = int(input("Enter your choice(1-3): "))
+        if choice == 3:
+            return
         temperature = float(input("Enter Temperature: "))
     except:
         print("Invalid choice. Check for menu options or temperature inputs.")
         temperature_menu()
     match choice:
         case 1:
-            print(f"{temperature} Fahrenheit == {convert_to_celsius(temperature)} Celsius")
+            print(f"\n{temperature} Fahrenheit == {convert_to_celsius(temperature)} Celsius")
             temperature_menu()
         case 2:
-            print(f"{temperature} Celsius == {convert_to_fahrenheit(temperature)} Fahrenheit")
+            print(f"\n{temperature} Celsius == {convert_to_fahrenheit(temperature)} Fahrenheit")
             temperature_menu()
-        case 3:
-            menu()
         case _:
             print("Invalid choice. Enter 1 - 3 numbers.")
             temperature_menu()
@@ -81,26 +80,25 @@ def temperature_menu():
 
 # Weight conversion menu
 def weight_menu():
-    print("Weight Conversion Menu:")
+    print("\nWeight Conversion Menu:")
     print("1. Grams to Kilograms")
     print("2. Kilograms to Grams")
     print("3. Exit")
     try:
         choice = int(input("Enter your choice(1-3): "))
+        if choice == 3:
+            return
         weight = float(input("Enter Weight: "))
     except:
         print("Invalid choice. Check for menu options or weight inputs.")
         weight_menu()
     match choice:
         case 1:
-            print(f"{weight} grams == {convert_to_kilograms(weight)} kilograms")
+            print(f"\n{weight} grams == {convert_to_kilograms(weight)} kilograms")
             weight_menu()
         case 2:
-            
-            print(f"{weight} kilograms == {convert_to_grams(weight)} grams")
+            print(f"\n{weight} kilograms == {convert_to_grams(weight)} grams")
             weight_menu()
-        case 3:
-            menu()
         case _:
             print("Invalid choice. Enter 1 - 3 numbers.")
             weight_menu()
@@ -109,7 +107,7 @@ def weight_menu():
 
 def menu():
     while True:
-        print("Unit Conversion Menu:")
+        print("\nUnit Conversion Menu:")
         print("1. Length")
         print("2. Temperature")
         print("3. Weight")
