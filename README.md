@@ -66,6 +66,6 @@ This project is open-source
 
 ---
 
-**Author:** Your Name\
+**Author:** Sairam
 **GitHub:** [https://github.com/20R01A66E3/](https://github.com/20R01A66E3/CLI-Unit_conversion.git)
 
